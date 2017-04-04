@@ -14,6 +14,17 @@ import { AddListingComponent } from './components/add-listing/add-listing.compon
 import { EditListingComponent } from './components/edit-listing/edit-listing.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyD4WQasFghNbPT0GSJIcmUsRNjT7InNzfk",
+  authDomain: "listings-data.firebaseapp.com",
+  databaseURL: "https://listings-data.firebaseio.com",
+  projectId: "listings-data",
+  storageBucket: "listings-data.appspot.com",
+  messagingSenderId: "765191351746"
+};
+
+
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'listings', component: ListingsComponent},
@@ -35,7 +46,9 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     RouterModule.forRoot(appRoutes)
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
