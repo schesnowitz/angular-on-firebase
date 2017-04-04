@@ -1,0 +1,13 @@
+.nav-link {
+  background-color: transparent !important;
+}
+
+#navbarNav > ul.navbar-nav > li > a:hover { 
+    color: #00274c !important; 
+    background-color: transparent !important;
+    }
+
+
+
+
+
